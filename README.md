@@ -10,12 +10,12 @@ http://teemapp.herokuapp.com
 
 ####To run locally and test
 ```
-git clone https://github.com/Kyvyas/final_project
+git clone https://github.com/ojlamb/final_project
 cd final_project
 bundle install
 bin/rake db:create
 bin/rake db:create RAILS_ENV=test
-bin/rake dib:migrate
+bin/rake db:migrate
 bin/rake db:seed
 bin/rails s
 ```
