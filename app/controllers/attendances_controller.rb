@@ -14,8 +14,8 @@ class AttendancesController < ApplicationController
         @activity.update(active_participants: @activity.active_participants + 1)
         @people_needed = @activity.participants - @activity.active_participants
         render json: { new_people_count: @people_needed, notice: "You are SO in!" }
-        ConfirmationMailer.confirm_attendance(@activity, current_user).deliver_now
-        ConfirmationMailer.notify_of_attendance(@activity, @activity.user, current_user).deliver_now
+        #ConfirmationMailer.confirm_attendance(@activity, current_user).deliver_now
+        #ConfirmationMailer.notify_of_attendance(@activity, @activity.user, current_user).deliver_now
       else
         render json: { notice: "You're already going to this activity - awesome!" }
       end
